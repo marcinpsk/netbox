@@ -51,6 +51,10 @@ DEBUG = True
 DEVELOPER = True
 
 DEFAULT_PERMISSIONS = {}
+
+# Codespaces proxy terminates SSL and forwards HTTP
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+CSRF_TRUSTED_ORIGINS = ['https://*.app.github.dev']
 PYEOF
 
 echo "==> Running database migrations..."
